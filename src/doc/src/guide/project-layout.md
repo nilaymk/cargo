@@ -43,10 +43,13 @@ Cargo [package][def-package]:
 * Examples go in the `examples` directory.
 * Integration tests go in the `tests` directory.
 
-If a binary, example, bench, or integration test consists of multiple source
-files, place a `main.rs` file along with the extra [*modules*][def-module]
-within a subdirectory of the `src/bin`, `examples`, `benches`, or `tests`
-directory. The name of the executable will be the directory name.
+If a binary consists of multiple source files, place a `main.rs` file along
+with the extra [*modules*][def-module] within a subdirectory of the `src/bin`.
+The name of the executable will be the directory name.
+
+For tests, examples and benches, place a `main.rs` file along with the extra 
+[*modules*][def-module] within a subdirectory directly under tests, example
+or benches folder.
 
 > **Note:** By convention, binaries, examples, benches and integration tests follow `kebab-case` naming style, unless there are compatibility reasons to do otherwise (e.g. compatibility with a pre-existing binary name). Modules within those targets are `snake_case` following the [Rust standard](https://rust-lang.github.io/rfcs/0430-finalizing-naming-conventions.html).
 
